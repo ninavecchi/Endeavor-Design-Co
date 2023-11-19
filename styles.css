@@ -93,6 +93,11 @@ h1 {
     text-align: center;
 }
 
+.contact-header {
+    margin-top: 30px;
+    text-align: center;
+}
+
 .image-placeholder {
     position: relative; 
     top: 15px;
@@ -103,7 +108,7 @@ h1 {
     object-fit: cover;
 }
 
-.wrapper {
+.wrapper-about {
     position:absolute;
     top: 225px;
     text-align: left;
@@ -115,7 +120,81 @@ h1 {
     color: #49596e;
 }
 
+.wrapper-contact {
+    position:absolute;
+    top: 225px;
+    text-align: left;
+    margin-left: 500px;
+    margin-right: 100px;
+    margin-bottom: 100px;
+    margin-top: 20px;
+    padding-bottom: 200px; 
+    color: #49596e;
+}
 
+form {
+    font-family: Arial, sans-serif;
+    max-width: 400px;
+    background-color: #49596e;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+form header {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box; 
+}
+
+textarea {
+    height: 100px;
+}
+
+.name-fields {
+    display: flex;
+    justify-content: space-between;
+}
+
+.name-fields input[type="text"] {
+    width: 48%; 
+}
+
+::placeholder {
+    color: #49596e;
+}
+
+input[type="submit"] {
+    background-color: #fff7e9;
+    color: #49596e;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    display: block;
+    width: 100%;
+    }
+
+table {
+    font-family: Arial, sans-serif;
+    width: 100%;
+    background-color: #e6e6e6;
+    margin-bottom: 20px;
+
+}
 footer {
     position: fixed;   
     bottom: 0;
@@ -140,3 +219,45 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+
+.testimonial-div {
+            font-family: Arial, sans-serif;
+            background: #49596e;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+.testimonial-container {
+            background: #ffffff;
+            padding: 40px;
+            margin: 20px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            position: relative;
+            width: 400px; 
+        }
+        
+.quote {
+            font-size: 5em;
+            color: #cccccc;
+        }
+        
+.quote:first-child {
+            position: absolute;
+            top: -10px;
+            left: -10px;
+        }
+        
+.quote:last-child {
+            position: absolute;
+            bottom: -10px;
+            right: -10px;
+        }
+        
+.testimonial-text {
+            font-size: 1em;
+            line-height: 1.5;
+            color: #333333;
+            margin: 50px 0; 
+        }
