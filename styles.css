@@ -10,7 +10,7 @@ header {
 }
 
 .navbar {
-    background-color: #C1C0BE;
+    background-color: #49596e;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -25,7 +25,7 @@ header {
 }
 
 .navbar a:hover {
-    color: #49596e;
+    color: #8392a6;
 }
 
 
@@ -49,6 +49,64 @@ h1 {
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 50px;
+}
+
+.gallery {
+display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto); 
+  grid-gap: 10px; 
+  margin: 20px; 
+  padding: 0;
+}
+
+.gallery-item {
+  width: 100%; 
+  height: auto;
+} 
+.gallery-item img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  }
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease; 
+}
+
+.gallery-item-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white; 
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none; 
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1); 
+}
+
+.gallery-item img {
+    transition: filter 0.3s;
+}
+
+.gallery-item:hover img {
+    filter: brightness(0.2);
+}
+
+.gallery-item:hover .gallery-item-text {
+  opacity: 1;
 }
 
 .grid-item {
@@ -261,3 +319,66 @@ footer a:hover {
             color: #333333;
             margin: 50px 0; 
         }
+
+@media only screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .navbar a {
+    margin-bottom: 10px;
+  }
+
+  .main,
+  .wrapper-about,
+  .wrapper-contact {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-item,
+  .image-placeholder {
+    width: 100%;
+    height: auto;
+  }
+
+  .wrapper-about,
+  .wrapper-contact {
+    position: relative;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .name-fields input[type="text"] {
+    width: 100%; 
+  }
+
+  .testimonial-container {
+    width: 90%;
+    margin: 20px auto;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-item,
+  .image-placeholder {
+    width: calc(100% - 40px); 
+  }
+
+  .form {
+    width: calc(100% - 40px); 
+  }
+
+  .testimonial-container {
+    width: calc(100% - 40px); 
+}
+
